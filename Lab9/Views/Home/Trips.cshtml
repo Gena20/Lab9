@@ -13,6 +13,7 @@
                 <th>Obj To</th>
                 <th>Date From</th>
                 <th>Date To</th>
+                <th>Time</th>
             </tr>
 
             @foreach (var trip in Model)
@@ -35,6 +36,9 @@
             </td>
             <td>
                 @Html.DisplayFor(_ => trip.date_to)
+            </td>
+            <td>
+                @Html.DisplayFor(_ => trip.time)
             </td>
         </tr>
             }

@@ -14,6 +14,10 @@ namespace Lab9.Controllers
         {
             ViewBag.Message = "Trips";
             var trips = model.trips.ToList();
+            foreach (var trip in trips)
+            {
+                trip.time = (trip.date_to - trip.date_from);
+            }
 
             return View(trips);
         }
